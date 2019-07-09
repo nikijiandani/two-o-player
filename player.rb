@@ -1,5 +1,6 @@
 class Player
-  attr_accessor :name, :lives
+  attr_reader :name
+  attr_accessor :lives
 
   MAX_LIVES = 3
 
@@ -10,6 +11,10 @@ class Player
 
   def dead?
     @lives <= 0
+  end
+
+  def lose_a_life
+    @lives -= 1
   end
 
 end
